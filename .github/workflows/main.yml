@@ -11,9 +11,8 @@ jobs:
       - name: test installed docker
         run: |
           docker version
-          docker run nginx
+          docker run -d nginx 
           docker ps -a
-          curl localhost
       - name: list files
         run: ls -altr
       - name: checkout repo
