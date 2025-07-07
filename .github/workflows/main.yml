@@ -9,5 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: list files
-        run: ls -alhtr
-
+        run: ls -altr
+      - name: checkout repo
+        uses: actions/checkout@v4.2.2
+      - name: list new files
+        run: ls -altr
+     
