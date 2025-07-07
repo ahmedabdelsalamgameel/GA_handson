@@ -9,7 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test installed docker
-        run: docker ps -a
+        run: |
+          docker -version
+          docker run nginx
+          docker ps -a
+          curl localhost
       - name: list files
         run: ls -altr
       - name: checkout repo
