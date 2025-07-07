@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: test installed docker
         run: |
-          docker -version
+          docker version
           docker run nginx
           docker ps -a
           curl localhost
