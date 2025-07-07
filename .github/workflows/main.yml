@@ -8,6 +8,8 @@ jobs:
   example-job:
     runs-on: ubuntu-latest
     steps:
+      - name: test installed docker
+        run: docker ps -a
       - name: list files
         run: ls -altr
       - name: checkout repo
