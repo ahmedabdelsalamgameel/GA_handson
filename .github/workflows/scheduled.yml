@@ -1,11 +1,11 @@
 on:
-    schedule:
-        - cron: '*/2 * * * *'
+  schedule:
+    - cron: '*/2 * * * *'
 
 jobs:
-    test:
-        runs-on: ubuntu-latest
-        steps:
-        - name: checkout code
-          run: df -h --total
-      
+  check_disk_space:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check disk space
+        run: df -h --total
+
