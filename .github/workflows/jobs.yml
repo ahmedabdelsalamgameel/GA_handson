@@ -8,13 +8,13 @@ jobs:
         run: ls -al /home
   job_2:
     runs-on: ubuntu-latest
+    needs: job_1
     steps:
       - name: save output to file
         run: ls -al /home > asd.txt
         
   job_3:
     runs-on: ubuntu-latest
-    needs: job_2
     steps:
       - name: view file content
         run: |
